@@ -56,7 +56,7 @@ public class DriveTrain extends Subsystem {
     // Set the default command for a subsystem here.
      setDefaultCommand(new DriveManuallyCommand());
   }
-
+  //tank drive
   //public void setLeftMotors(double move) {
     //leftMaster.set(ControlMode.PercentOutput, -move);
     //leftSlave.set(ControlMode.PercentOutput, -move);
