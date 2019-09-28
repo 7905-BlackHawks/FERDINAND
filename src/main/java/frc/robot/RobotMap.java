@@ -39,8 +39,8 @@ public class RobotMap {
 
   //USB
   public static final int joystickPort = 0;
-  public static final int joystickPort_MOVE_AXIS = 2;
-  public static final int joystickPort_ROTATE_AXIS = 4;
+  public static final int joystickPort_MOVE_AXIS = 1;
+  public static final int joystickPort_ROTATE_AXIS = 2;
 
   public static final int operatorPort = 1;
 
