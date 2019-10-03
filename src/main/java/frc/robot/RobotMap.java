@@ -27,8 +27,8 @@ public class RobotMap {
 
 
   //CAN
-  public static final int left = 0; 
-  public static final int right = 1;
+  public static int left = 0; 
+  public static int right = 1;
 
 
 
@@ -40,7 +40,7 @@ public class RobotMap {
   //USB
   public static final int joystickPort = 0;
   public static final int joystickPort_MOVE_AXIS = 1;
-  public static final int joystickPort_ROTATE_AXIS = 2;
+  public static final int joystickPort_ROTATE_AXIS = 4;
 
   public static final int operatorPort = 1;
 

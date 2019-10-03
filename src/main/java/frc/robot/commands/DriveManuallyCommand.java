@@ -28,7 +28,7 @@ public class DriveManuallyCommand extends Command {
 
     double move = -Robot.oi.stick.getRawAxis(RobotMap.joystickPort_MOVE_AXIS);
     double turn = Robot.oi.stick.getRawAxis(RobotMap.joystickPort_ROTATE_AXIS);
-    Robot.DriveTrain.manualDrive(move*0.7, turn*0.7);
+    Robot.DriveTrain.manualDrive(move*0.5, turn*0.5);
   }
 
   // Make this return true when this Command no longer needs to run execute()
