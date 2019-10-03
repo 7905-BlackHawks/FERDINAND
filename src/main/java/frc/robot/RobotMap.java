@@ -27,8 +27,8 @@ public class RobotMap {
 
 
   //CAN
-  public static int left = 0; 
-  public static int right = 1;
+  public static final int left = 0; 
+  public static final int right = 1;
 
 
 
