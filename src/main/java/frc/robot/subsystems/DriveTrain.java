@@ -26,14 +26,14 @@ public class DriveTrain extends Subsystem {
 
 
   // instantiate new motor controller objects
-  public WPI_VictorSPX left = new WPI_VictorSPX(RobotMap.left);
-  public WPI_VictorSPX right = new WPI_VictorSPX(RobotMap.right);
+  public WPI_VictorSPX left_SIDE = new WPI_VictorSPX(RobotMap.left);
+  public WPI_VictorSPX right_SIDE = new WPI_VictorSPX(RobotMap.right);
 
 
   
   // instantiate a new DifferentialDrive object and assign motor controllers to differential drive
   //public DifferentialDrive drive = new DifferentialDrive(leftMaster, rightMaster); 
-  public DifferentialDrive drive = new DifferentialDrive(left, right);
+  public DifferentialDrive drive = new DifferentialDrive(left_SIDE, right_SIDE);
    
 
   // create constructor function
