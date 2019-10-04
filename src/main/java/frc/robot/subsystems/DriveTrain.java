@@ -37,11 +37,11 @@ public class DriveTrain extends Subsystem {
    
 
   // create constructor function
-  public DriveTrain() {
+  
   // point slaves to masters
   //leftSlave.follow(leftMaster);
   //rightSlave.follow(rightMaster);
-  }
+  
 
   // add manualDrive() method
   public void manualDrive(double move, double turn) {
