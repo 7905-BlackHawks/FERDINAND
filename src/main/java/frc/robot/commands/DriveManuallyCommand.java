@@ -26,9 +26,22 @@ public class DriveManuallyCommand extends Command {
   @Override
   protected void execute() {
 
+    double precision = 1.0;
+    if (Robot.oi.stick.getRawButton(5)) {
+      precision = 0.25;
+    } else {
+      precision = 0.8;
+
     double move = -Robot.oi.stick.getRawAxis(RobotMap.joystickPort_MOVE_AXIS);
     double turn = Robot.oi.stick.getRawAxis(RobotMap.joystickPort_ROTATE_AXIS);
-    Robot.DriveTrain.manualDrive(move*0.5, turn*0.5);
+    Robot.DriveTrain.manualDrive(move*precision, turn*precision);
+    
+    }
+
+
+    
+    
+
   }
 
   // Make this return true when this Command no longer needs to run execute()
