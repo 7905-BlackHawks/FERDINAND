@@ -27,7 +27,7 @@ public class DriveManuallyCommand extends Command {
   protected void execute() {
 
     double precision = 1.0;
-    if (Robot.oi.stick.getRawButton(5)) {
+    if (Robot.oi.stick.getRawButton(RobotMap.joystickPort_SLOW)) {
       precision = 0.25;
     } else {
       precision = 0.8;

@@ -41,6 +41,7 @@ public class RobotMap {
   public static final int joystickPort = 0;
   public static final int joystickPort_MOVE_AXIS = 1;
   public static final int joystickPort_ROTATE_AXIS = 4;
+  public static final int joystickPort_SLOW = 5;
   
 
   public static final int operatorPort = 1;
