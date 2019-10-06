@@ -35,7 +35,7 @@ public class DriveManuallyCommand extends Command {
     double move = -Robot.oi.stick.getRawAxis(RobotMap.joystickPort_MOVE_AXIS);
     double turn = Robot.oi.stick.getRawAxis(RobotMap.joystickPort_ROTATE_AXIS);
     Robot.DriveTrain.manualDrive(move*precision, turn*precision);
-    
+
     }
 
 
