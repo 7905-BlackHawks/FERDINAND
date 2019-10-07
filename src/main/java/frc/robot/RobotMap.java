@@ -50,8 +50,8 @@ public class RobotMap {
 
   // Constants
 
-  public static final double Deadzone_Value = 0.1;
-  public static final double Precision_Slow = 0.35;
+  public static final double Deadzone_Value = 0.05;
+  public static final double Precision_Slow = 0.5;
   public static final double Precision_Norm = 0.7;
   public static final double Precision_Fast = 1.0;
 
