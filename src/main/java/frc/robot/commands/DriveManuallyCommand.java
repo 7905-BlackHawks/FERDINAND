@@ -7,6 +7,8 @@
 
 package frc.robot.commands;
 
+
+
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.Robot;
 import frc.robot.RobotMap;
@@ -28,13 +30,22 @@ public class DriveManuallyCommand extends Command {
 
     double precision = 1.0;
     if (Robot.oi.stick.getRawButton(RobotMap.joystickPort_SLOW)) {
-      precision = 0.25;
+      precision = RobotMap.Precision_Slow;
     } else {
-      precision = 0.8;
+      precision = RobotMap.Precision_Fast;
 
     double move = -Robot.oi.stick.getRawAxis(RobotMap.joystickPort_MOVE_AXIS);
     double turn = Robot.oi.stick.getRawAxis(RobotMap.joystickPort_ROTATE_AXIS);
     Robot.DriveTrain.manualDrive(move*precision, turn*precision);
+
+    if (move < RobotMap.Deadzone_Value) {
+      move = 0; 
+    }
+    if (turn < RobotMap.Deadzone_Value ) {
+      turn = 0;
+    }
+
+    
 
     }
 

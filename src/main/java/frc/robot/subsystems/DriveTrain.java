@@ -11,7 +11,6 @@ package frc.robot.subsystems;
 //import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
 
-
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import frc.robot.RobotMap;
@@ -27,7 +26,13 @@ public class DriveTrain extends Subsystem {
 
   // instantiate new motor controller objects
   public WPI_VictorSPX left_SIDE = new WPI_VictorSPX(RobotMap.left);
+
   public WPI_VictorSPX right_SIDE = new WPI_VictorSPX(RobotMap.right);
+  
+
+  //SpeedControllerGroup left_SIDE = new SpeedControllerGroup(left_SIDE1, left_SIDE2);
+  //SpeedControllerGroup right_SIDE = new SpeedControllerGroup(right_SIDE1, right_SIDE2);
+
 
 
   
