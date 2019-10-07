@@ -7,8 +7,6 @@
 
 package frc.robot.commands;
 
-
-
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.Robot;
 import frc.robot.RobotMap;
@@ -32,7 +30,11 @@ public class DriveManuallyCommand extends Command {
     if (Robot.oi.stick.getRawButton(RobotMap.joystickPort_SLOW)) {
       precision = RobotMap.Precision_Slow;
     } else {
+      precision = RobotMap.Precision_Norm;
+    }
+    if (Robot.oi.stick.getRawButton(RobotMap.joystickPort_Fast)) {
       precision = RobotMap.Precision_Fast;
+    }
 
     double move = -Robot.oi.stick.getRawAxis(RobotMap.joystickPort_MOVE_AXIS);
     double turn = Robot.oi.stick.getRawAxis(RobotMap.joystickPort_ROTATE_AXIS);
@@ -53,7 +55,7 @@ public class DriveManuallyCommand extends Command {
     
     
 
-  }
+  
 
   // Make this return true when this Command no longer needs to run execute()
   @Override
