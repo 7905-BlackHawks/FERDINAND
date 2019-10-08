@@ -39,18 +39,18 @@ public class DriveManuallyCommand extends Command {
     double move = -Robot.oi.stick.getRawAxis(RobotMap.joystickPort_MOVE_AXIS);
     double turn = Robot.oi.stick.getRawAxis(RobotMap.joystickPort_ROTATE_AXIS); 
 
-    if (Math.abs(move) < RobotMap.Deadzone_Value) {
+    if ((Math.abs(move) < RobotMap.Deadzone_Value)) {
       move = 0; 
     }
-    if (Math.abs(turn) < RobotMap.Deadzone_Value) {
-      move = 0; 
+    if ((Math.abs(turn) < RobotMap.Deadzone_Value)) {
+      turn = 0; 
     }
     
     
     
     
     
-    Robot.DriveTrain.manualDrive(move*precision, turn*precision);
+    Robot.DriveTrain.manualDrive(move*precision, (turn*precision)*RobotMap.Turn_Scalar);
 
 
 

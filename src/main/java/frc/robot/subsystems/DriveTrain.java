@@ -13,6 +13,7 @@ import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
+import frc.robot.Robot;
 import frc.robot.RobotMap;
 import frc.robot.commands.DriveManuallyCommand;
 
@@ -50,10 +51,11 @@ public class DriveTrain extends Subsystem {
 
   // add manualDrive() method
   public void manualDrive(double move, double turn) {
+    drive.curvatureDrive(move, turn, Robot.oi.stick.getRawButton(RobotMap.joystickPort_QuickTurn));
 
     
 
-    drive.arcadeDrive(move, turn);
+    //drive.arcadeDrive(move, turn);
   }
 
 
