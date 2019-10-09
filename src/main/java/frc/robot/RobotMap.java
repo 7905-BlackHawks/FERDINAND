@@ -27,8 +27,8 @@ public class RobotMap {
 
 
   //CAN
-  public static final int left = 0; 
-  public static final int right = 1;
+  public static final int left = 2; 
+  public static final int right = 3;
 
 
 
@@ -55,7 +55,7 @@ public class RobotMap {
   public static final double Precision_Slow = 0.5;
   public static final double Precision_Norm = 0.7;
   public static final double Precision_Fast = 1.0;
-  public static final double Turn_Scalar = 0.7;
+  
 
 
 

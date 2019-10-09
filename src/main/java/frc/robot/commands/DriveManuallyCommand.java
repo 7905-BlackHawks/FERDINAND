@@ -50,7 +50,7 @@ public class DriveManuallyCommand extends Command {
     
     
     
-    Robot.DriveTrain.manualDrive(move*precision, (turn*precision)*RobotMap.Turn_Scalar);
+    Robot.DriveTrain.manualDrive(move*precision, (turn*precision));
 
 
 
