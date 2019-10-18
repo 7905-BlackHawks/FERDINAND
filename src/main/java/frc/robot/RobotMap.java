@@ -27,12 +27,16 @@ public class RobotMap {
 
 
   //CAN
-  public static final int left = 2; 
-  public static final int right = 3;
+  public static final int leftyellow = 2; 
+  public static final int leftblue = 1; 
+  public static final int rightred = 3;
+  public static final int rightorange = 4;
+
 
 
 
   //PWM
+  public static final int Elevator = 5;
 
 
 
@@ -43,7 +47,8 @@ public class RobotMap {
   public static final int joystickPort_ROTATE_AXIS = 4;
   public static final int joystickPort_SLOW = 5;
   public static final int joystickPort_Fast = 6;
-  public static final int joystickPort_QuickTurn = 4;
+  public static final int joystickPort_QuickTurn = 3;
+  public static final int TriggerAxis = 3;
   
 
   public static final int operatorPort = 1;
@@ -52,11 +57,12 @@ public class RobotMap {
   // Constants
 
   public static final double Deadzone_Value = 0.05;
-  public static final double Precision_Slow = 0.5;
-  public static final double Precision_Norm = 0.7;
-  public static final double Precision_Fast = 1.0;
-  
-
+  public static final double Precision_Move_Slow = 0.5;
+  public static final double Precision_Move_Norm = 0.7;
+  public static final double Precision_Move_Fast = 1.0;
+  public static final double Precision_Turn_Slow = 0.5;
+  public static final double Precision_Turn_Norm = 0.7;
+  public static final double Precision_Turn_Fast = 0.8;
 
 
 

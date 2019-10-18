@@ -11,6 +11,7 @@ package frc.robot.subsystems;
 //import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
 
+import edu.wpi.first.wpilibj.SpeedControllerGroup;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import frc.robot.Robot;
@@ -26,13 +27,14 @@ public class DriveTrain extends Subsystem {
 
 
   // instantiate new motor controller objects
-  public WPI_VictorSPX left_SIDE = new WPI_VictorSPX(RobotMap.left);
-
-  public WPI_VictorSPX right_SIDE = new WPI_VictorSPX(RobotMap.right);
+  public WPI_VictorSPX left_yellow = new WPI_VictorSPX(RobotMap.leftyellow);
+  public WPI_VictorSPX left_blue = new WPI_VictorSPX(RobotMap.leftblue);
+  public WPI_VictorSPX right_red = new WPI_VictorSPX(RobotMap.rightred);
+  public WPI_VictorSPX right_orange = new WPI_VictorSPX(RobotMap.rightorange);
   
 
-  //SpeedControllerGroup left_SIDE = new SpeedControllerGroup(left_SIDE1, left_SIDE2);
-  //SpeedControllerGroup right_SIDE = new SpeedControllerGroup(right_SIDE1, right_SIDE2);
+  SpeedControllerGroup left_SIDE = new SpeedControllerGroup(left_yellow, left_blue);
+  SpeedControllerGroup right_SIDE = new SpeedControllerGroup(right_red, right_orange);
 
 
 
@@ -51,7 +53,10 @@ public class DriveTrain extends Subsystem {
 
   // add manualDrive() method
   public void manualDrive(double move, double turn) {
-    drive.curvatureDrive(move, turn, Robot.oi.stick.getRawButton(RobotMap.joystickPort_QuickTurn));
+
+
+    drive.curvatureDrive(move, turn, Robot.oi.RightTrigger.get());
+    
 
     
 

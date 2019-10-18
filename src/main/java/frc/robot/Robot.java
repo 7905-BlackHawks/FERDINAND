@@ -13,6 +13,7 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.subsystems.DriveTrain;
+import frc.robot.subsystems.Elevator;
 
 
 /**
@@ -24,6 +25,7 @@ import frc.robot.subsystems.DriveTrain;
  */
 public class Robot extends TimedRobot {
   public static DriveTrain DriveTrain = new DriveTrain();
+  public static frc.robot.subsystems.Elevator Elevator = new Elevator();
   public static OI oi;
 
   Command m_autonomousCommand;

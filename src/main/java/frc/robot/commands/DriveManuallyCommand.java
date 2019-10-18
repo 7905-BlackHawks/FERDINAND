@@ -26,14 +26,23 @@ public class DriveManuallyCommand extends Command {
   @Override
   protected void execute() {
 
-    double precision = 1.0;
+    double precision_Move = 1.0;
     if (Robot.oi.stick.getRawButton(RobotMap.joystickPort_SLOW)) {
-      precision = RobotMap.Precision_Slow;
+      precision_Move = RobotMap.Precision_Move_Slow;
     } else {
-      precision = RobotMap.Precision_Norm;
+      precision_Move = RobotMap.Precision_Move_Norm;
     }
     if (Robot.oi.stick.getRawButton(RobotMap.joystickPort_Fast)) {
-      precision = RobotMap.Precision_Fast;
+      precision_Move = RobotMap.Precision_Move_Fast;
+    }
+    double precision_Turn = 1.0;
+    if (Robot.oi.stick.getRawButton(RobotMap.joystickPort_SLOW)) {
+      precision_Turn = RobotMap.Precision_Turn_Slow;
+    } else {
+      precision_Turn = RobotMap.Precision_Turn_Norm;
+    }
+    if (Robot.oi.stick.getRawButton(RobotMap.joystickPort_Fast)) {
+      precision_Turn = RobotMap.Precision_Turn_Fast;
     }
 
     double move = -Robot.oi.stick.getRawAxis(RobotMap.joystickPort_MOVE_AXIS);
@@ -50,7 +59,7 @@ public class DriveManuallyCommand extends Command {
     
     
     
-    Robot.DriveTrain.manualDrive(move*precision, (turn*precision));
+    Robot.DriveTrain.manualDrive(move*precision_Move, (turn*precision_Turn));
 
 
 
