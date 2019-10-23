@@ -29,8 +29,8 @@ public class RobotMap {
   //CAN
   public static final int leftyellow = 2; 
   public static final int leftblue = 1; 
-  public static final int rightred = 3;
-  public static final int rightorange = 4;
+  public static final int rightwhite = 3;
+  public static final int rightgreen = 4;
 
 
 

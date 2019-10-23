@@ -27,14 +27,14 @@ public class DriveTrain extends Subsystem {
 
 
   // instantiate new motor controller objects
-  public WPI_VictorSPX left_yellow = new WPI_VictorSPX(RobotMap.leftyellow);
-  public WPI_VictorSPX left_blue = new WPI_VictorSPX(RobotMap.leftblue);
-  public WPI_VictorSPX right_red = new WPI_VictorSPX(RobotMap.rightred);
-  public WPI_VictorSPX right_orange = new WPI_VictorSPX(RobotMap.rightorange);
+  public WPI_VictorSPX left1 = new WPI_VictorSPX(RobotMap.leftyellow);
+  public WPI_VictorSPX left2 = new WPI_VictorSPX(RobotMap.leftblue);
+  public WPI_VictorSPX right1 = new WPI_VictorSPX(RobotMap.rightwhite);
+  public WPI_VictorSPX right2 = new WPI_VictorSPX(RobotMap.rightgreen);
   
 
-  SpeedControllerGroup left_SIDE = new SpeedControllerGroup(left_yellow, left_blue);
-  SpeedControllerGroup right_SIDE = new SpeedControllerGroup(right_red, right_orange);
+  SpeedControllerGroup left_SIDE = new SpeedControllerGroup(left1, left2);
+  SpeedControllerGroup right_SIDE = new SpeedControllerGroup(right1, right2);
 
 
 
