@@ -30,7 +30,7 @@ public class XBoxTrigger extends Button {
 
     @Override
     public boolean get() {
-        return stick.getRawAxis(axis) > 0.15;
+        return stick.getRawAxis(RobotMap.TriggerAxis) > 0.15;
     }
 
 }
