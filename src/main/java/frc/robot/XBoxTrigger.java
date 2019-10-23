@@ -25,7 +25,7 @@ public class XBoxTrigger extends Button {
     }
 
     public double getTriggerValue() {
-        return stick.getRawAxis(axis);
+        return stick.getRawAxis(RobotMap.TriggerAxis);
     }
 
     @Override
