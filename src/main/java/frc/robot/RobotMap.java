@@ -27,10 +27,10 @@ public class RobotMap {
 
 
   //CAN
-  public static final int leftyellow = 2; 
+  public static final int leftyellow = 0; 
   public static final int leftblue = 1; 
-  public static final int rightwhite = 3;
-  public static final int rightgreen = 4;
+  public static final int rightwhite = 14;
+  public static final int rightgreen = 15;
 
 
 
@@ -42,16 +42,23 @@ public class RobotMap {
 
 
   //USB
-  public static final int joystickPort = 0;
-  public static final int joystickPort_MOVE_AXIS = 1;
-  public static final int joystickPort_ROTATE_AXIS = 4;
-  public static final int joystickPort_SLOW = 5;
-  public static final int joystickPort_Fast = 6;
-  public static final int joystickPort_QuickTurn = 3;
-  public static final int TriggerAxis = 3;
-  
+    //Driver
+    public static final int joystickPort = 0;
+    public static final int joystickPort_MOVE_AXIS = 1;
+    public static final int joystickPort_ROTATE_AXIS = 4;
+    public static final int joystickPort_SLOW = 5;
+    public static final int joystickPort_Fast = 6;
+    public static final int joystickPort_QuickTurn = 4;
+    public static final int TriggerAxis = 3;
 
-  public static final int operatorPort = 1;
+    //Operator
+
+     public static final int operatorPort = 1;
+     public static final int operatorPort_Ball_Spit = 6;
+     public static final int operatorPort_Ball_Suck = 5;
+     public static final int operatorPort_ELV_AXIS = 5;
+
+  
 
 
   // Constants

@@ -35,14 +35,15 @@ public class OI {
         LeftTrigger = new XBoxTrigger(stick, 2);
         RightTrigger = new XBoxTrigger(stick, 3);
     }
-                               
+  public Joystick Operator  = new Joystick(RobotMap.operatorPort);
+                         
 
 
 
 
 
 
-  public Joystick Pad= new Joystick(RobotMap.operatorPort);
+  
   // Button button = new JoystickButton(stick, buttonNumber);
 
   // There are a few additional built in buttons you can use. Additionally,
