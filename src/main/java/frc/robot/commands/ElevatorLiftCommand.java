@@ -27,6 +27,8 @@ public class ElevatorLiftCommand extends Command {
   protected void execute() {
 
     double power = -Robot.oi.Operator.getRawAxis(RobotMap.operatorPort_ELV_AXIS);
+
+    Robot.Elevator.setpower(power);
   }
 
   // Make this return true when this Command no longer needs to run execute()
