@@ -36,6 +36,8 @@ public class DriveManuallyCommand extends Command {
       precision_Move = RobotMap.Precision_Move_Fast;
     }
     double precision_Turn = 1.0;
+
+    
     if (Robot.oi.stick.getRawButton(RobotMap.joystickPort_SLOW)) {
       precision_Turn = RobotMap.Precision_Turn_Slow;
     } else {
