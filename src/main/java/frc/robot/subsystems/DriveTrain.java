@@ -55,8 +55,8 @@ public class DriveTrain extends Subsystem {
   public void manualDrive(double move, double turn) {
 
 
-    //drive.curvatureDrive(move, turn, Robot.oi.RightTrigger.get());
-    drive.curvatureDrive(move, turn, Robot.oi.stick.getRawButton(RobotMap.joystickPort_QuickTurn));
+    drive.curvatureDrive(move, turn, Robot.oi.RightTrigger.get());
+    //drive.curvatureDrive(move, turn, Robot.oi.stick.getRawButton(RobotMap.joystickPort_QuickTurn));
     
 
     
