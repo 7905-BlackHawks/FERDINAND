@@ -16,6 +16,7 @@ import frc.robot.subsystems.DriveTrain;
 import frc.robot.subsystems.Elevator;
 
 
+
 /**
  * The VM is configured to automatically run this class, and to call the
  * functions corresponding to each mode, as described in the TimedRobot
@@ -28,8 +29,9 @@ public class Robot extends TimedRobot {
   public static frc.robot.subsystems.Elevator Elevator = new Elevator();
   public static OI oi;
 
+
   Command m_autonomousCommand;
-  SendableChooser<Command> m_chooser = new SendableChooser<>();
+  SendableChooser<Command> chooser = new SendableChooser<>();
 
   /**
    * This function is run when the robot is first started up and should be
@@ -40,7 +42,7 @@ public class Robot extends TimedRobot {
     oi = new OI();
     //m_chooser.setDefaultOption("Default Auto", new ExampleCommand());
      //chooser.addOption("My Auto", new MyAutoCommand());
-    SmartDashboard.putData("Auto mode", m_chooser);
+    SmartDashboard.putData("Auto mode", chooser);
   }
 
   /**
@@ -82,7 +84,7 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void autonomousInit() {
-    m_autonomousCommand = m_chooser.getSelected();
+    m_autonomousCommand = chooser.getSelected();
 
     /*
      * String autoSelected = SmartDashboard.getString("Auto Selector",

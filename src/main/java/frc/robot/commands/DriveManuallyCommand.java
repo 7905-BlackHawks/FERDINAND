@@ -7,6 +7,7 @@
 
 package frc.robot.commands;
 
+import edu.wpi.first.wpilibj.Servo;
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.Robot;
 import frc.robot.RobotMap;
@@ -57,18 +58,56 @@ public class DriveManuallyCommand extends Command {
       turn = 0; 
     }
     
+
+
+
+    
     
     
     
     
     Robot.DriveTrain.manualDrive(move*precision_Move, (turn*precision_Turn));
 
+      
 
+  
+
+
+      //camera servo
+      Servo VisionServo = new Servo(RobotMap.CameraServo);
+
+      if (Robot.oi.stick.getRawButton(RobotMap.Ybutton)) {
+        VisionServo.setAngle(0);
+      }
+
+      if (Robot.oi.stick.getRawButton(RobotMap.Bbutton)) {
+          VisionServo.setAngle(90);
+        } else {
+          VisionServo.setAngle(0);
+        }
+      if (Robot.oi.stick.getRawButton(RobotMap.Xbutton)) {
+          VisionServo.setAngle(-90);
+        } else {
+          VisionServo.setAngle(0);
+        }
+        if (Robot.oi.stick.getRawButton(RobotMap.Abutton)) {
+          VisionServo.setAngle(180);
+        } else {
+          VisionServo.setAngle(0);}
+          
+          VisionServo.close();
+  }
+       
 
     
-    
 
-    }
+
+
+
+
+
+      
+
 
 
     

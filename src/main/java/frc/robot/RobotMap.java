@@ -37,6 +37,7 @@ public class RobotMap {
 
   //PWM
   public static final int Elevator = 5;
+  public static final int CameraServo = 0;
 
 
 
@@ -50,6 +51,10 @@ public class RobotMap {
     public static final int joystickPort_Fast = 6;
     public static final int joystickPort_QuickTurn = 4;
     public static final int TriggerAxis = 3;
+    public static final int Ybutton = 4;
+    public static final int Xbutton = 3;
+    public static final int Bbutton = 2;
+    public static final int Abutton = 1;
 
     //Operator
 

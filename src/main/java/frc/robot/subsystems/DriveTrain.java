@@ -76,6 +76,10 @@ public class DriveTrain extends Subsystem {
     //leftSlave.set(ControlMode.PercentOutput, -move);
   //}
 
+
+public void drive(int i, double speed, int j) {
+}
+
   //public void setRightMotors(double move) {
   //  rightMaster.set(ControlMode.PercentOutput, move);
   //  rightSlave.set(ControlMode.PercentOutput, move);
