@@ -7,6 +7,9 @@
 
 package frc.robot;
 
+import edu.wpi.cscore.UsbCamera;
+import edu.wpi.cscore.VideoMode.PixelFormat;
+import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
@@ -26,7 +29,7 @@ import frc.robot.subsystems.Elevator;
  */
 public class Robot extends TimedRobot {
   public static DriveTrain DriveTrain = new DriveTrain();
-  public static frc.robot.subsystems.Elevator Elevator = new Elevator();
+  public static Elevator elevator = new Elevator();
   public static OI oi;
 
 
@@ -43,6 +46,8 @@ public class Robot extends TimedRobot {
     //m_chooser.setDefaultOption("Default Auto", new ExampleCommand());
      //chooser.addOption("My Auto", new MyAutoCommand());
     SmartDashboard.putData("Auto mode", chooser);
+    UsbCamera camera = CameraServer.getInstance().startAutomaticCapture();
+    camera.setVideoMode(PixelFormat.kMJPEG, 160, 120, 5);
   }
 
   /**

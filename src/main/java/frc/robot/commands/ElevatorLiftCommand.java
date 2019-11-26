@@ -14,7 +14,7 @@ import frc.robot.RobotMap;
 public class ElevatorLiftCommand extends Command {
   public ElevatorLiftCommand() {
     // Use requires() here to declare subsystem dependencies
-     requires(Robot.Elevator);
+     requires(Robot.elevator);
   }
 
   // Called just before this Command runs the first time
@@ -28,7 +28,7 @@ public class ElevatorLiftCommand extends Command {
 
     double power = -Robot.oi.Operator.getRawAxis(RobotMap.operatorPort_ELV_AXIS);
 
-    Robot.Elevator.setpower(power);
+    Robot.elevator.setpower(power);
   }
 
   // Make this return true when this Command no longer needs to run execute()
