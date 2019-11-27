@@ -26,7 +26,7 @@ public class DriveManuallyCommand extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-
+    //set fast and slow modes
     double precision_Move = 1.0;
     if (Robot.oi.stick.getRawButton(RobotMap.joystickPort_SLOW)) {
       precision_Move = RobotMap.Precision_Move_Slow;
@@ -51,6 +51,7 @@ public class DriveManuallyCommand extends Command {
     double move = -Robot.oi.stick.getRawAxis(RobotMap.joystickPort_MOVE_AXIS);
     double turn = Robot.oi.stick.getRawAxis(RobotMap.joystickPort_ROTATE_AXIS); 
 
+    // set deadzones
     if ((Math.abs(move) < RobotMap.Deadzone_Value)) {
       move = 0; 
     }

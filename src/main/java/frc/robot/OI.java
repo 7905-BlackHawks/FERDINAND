@@ -61,8 +61,8 @@ public class OI {
 
   // Run the command while the button is being held down and interrupt it once
   // the button is released.
-   // button.whileHeld(new ExampleCommand());
-  //Stick.button5.whileHeld(new Slow_Mode(true, 1));
+   // button.whileHeld(new E(true, 1));
+   //Stick.button5.whileHeld(new turn180auto(true, 1));
 
   // Start the command when the button is released and let it run the command
   // until it is finished as determined by it's isFinished method.
