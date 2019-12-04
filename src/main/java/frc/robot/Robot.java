@@ -48,8 +48,8 @@ public class Robot extends TimedRobot {
     oi = new OI();
 
     // set up auto chooser
-    chooser.setDefaultOption("Default Auto", new turn180auto());
-     chooser.addOption("My Auto", new turn180auto());
+    //chooser.setDefaultOption("Turn180?", new turn180auto());
+     chooser.addOption("Turn", new turn180auto());
     SmartDashboard.putData("Auto mode", chooser);
 
     //set up camera
@@ -88,6 +88,7 @@ public class Robot extends TimedRobot {
 
   @Override
   public void disabledPeriodic() {
+
     Scheduler.getInstance().run();
   }
 
@@ -106,12 +107,16 @@ public class Robot extends TimedRobot {
   public void autonomousInit() {
     autonomousCommand = chooser.getSelected();
 
-    /*
-     * String autoSelected = SmartDashboard.getString("Auto Selector",
-     * "Default"); switch(autoSelected) { case "My Auto": autonomousCommand
-     * = new MyAutoCommand(); break; case "Default Auto": default:
-     * autonomousCommand = new ExampleCommand(); break; }
-     */
+    
+      String autoSelected = SmartDashboard.getString("Auto Selector","Default"); 
+
+      switch(autoSelected) { 
+        case "Turn": autonomousCommand = new turn180auto();   break; 
+
+         //case "Turn180?": default: autonomousCommand = new turn180auto();   break; 
+
+        }
+     
 
     // schedule the autonomous command (example)
     if (autonomousCommand != null) {
@@ -124,7 +129,8 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void autonomousPeriodic() {
-    //Scheduler.getInstance().run();
+
+    Scheduler.getInstance().run();
   }
 
   @Override
