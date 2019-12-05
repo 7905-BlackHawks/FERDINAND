@@ -7,6 +7,8 @@
 
 package frc.robot.commands;
 
+
+
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.Robot;
 
@@ -32,16 +34,26 @@ public class turn180auto extends Command {
     Robot.DriveTrain.right2.set(0.3);
 
     try {
-      Thread.sleep(6000);
+      Thread.sleep(3000);
     } catch (InterruptedException e) {
       
       e.printStackTrace();
-    }
+
+    
 
       Robot.DriveTrain.left1.set(0);
       Robot.DriveTrain.left2.set(0);
       Robot.DriveTrain.right1.set(0);
       Robot.DriveTrain.right2.set(0);
+
+
+
+
+    }
+
+
+
+      
 
     
   }
