@@ -15,6 +15,7 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import frc.robot.commands.gobackwardsauto;
 import frc.robot.commands.turn180auto;
 import frc.robot.subsystems.DriveTrain;
 import frc.robot.subsystems.Elevator;
@@ -48,8 +49,8 @@ public class Robot extends TimedRobot {
     oi = new OI();
 
     // set up auto chooser
-    chooser.setDefaultOption("Turn180?", new turn180auto());
-     //chooser.addOption("Turn", new turn180auto());
+    chooser.setDefaultOption("Turn", new turn180auto());
+     chooser.addOption("Back", new gobackwardsauto());
     SmartDashboard.putData("Auto mode", chooser);
 
     //set up camera
@@ -59,6 +60,7 @@ public class Robot extends TimedRobot {
 
     //run autonomous
     autonomousCommand = new turn180auto();
+    autonomousCommand = new gobackwardsauto();
 
 
 
@@ -111,9 +113,9 @@ public class Robot extends TimedRobot {
       String autoSelected = SmartDashboard.getString("Auto Selector","Default"); 
 
       switch(autoSelected) { 
-        case "Turn": autonomousCommand = new turn180auto();   break; 
+        case "Back": autonomousCommand = new gobackwardsauto();   break; 
 
-         case "Turn180?": default: autonomousCommand = new turn180auto();   break; 
+         case "Turn": default: autonomousCommand = new turn180auto();   break; 
 
         }
      
