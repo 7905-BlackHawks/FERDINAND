@@ -48,13 +48,13 @@ public class Robot extends TimedRobot {
     oi = new OI();
 
     // set up auto chooser
-    //chooser.setDefaultOption("Turn180?", new turn180auto());
-     chooser.addOption("Turn", new turn180auto());
+    chooser.setDefaultOption("Turn180?", new turn180auto());
+     //chooser.addOption("Turn", new turn180auto());
     SmartDashboard.putData("Auto mode", chooser);
 
     //set up camera
     UsbCamera camera = CameraServer.getInstance().startAutomaticCapture();
-    camera.setVideoMode(PixelFormat.kMJPEG, 160, 120, 5);
+    camera.setVideoMode(PixelFormat.kMJPEG, 360, 360, 15);
 
 
     //run autonomous
@@ -113,7 +113,7 @@ public class Robot extends TimedRobot {
       switch(autoSelected) { 
         case "Turn": autonomousCommand = new turn180auto();   break; 
 
-         //case "Turn180?": default: autonomousCommand = new turn180auto();   break; 
+         case "Turn180?": default: autonomousCommand = new turn180auto();   break; 
 
         }
      
