@@ -55,7 +55,7 @@ public class Robot extends TimedRobot {
 
     //set up camera
     UsbCamera camera = CameraServer.getInstance().startAutomaticCapture();
-    camera.setVideoMode(PixelFormat.kMJPEG, 360, 360, 15);
+    camera.setVideoMode(PixelFormat.kMJPEG, 360, 360, 10);
 
 
     //run autonomous
